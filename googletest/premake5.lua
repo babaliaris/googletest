@@ -1,4 +1,5 @@
 project "googletest"
+	staticruntime "on"
 	kind "StaticLib"
 	language "C++"
 	targetdir "%{_WORKING_DIR}/builds/%{cfg.shortname}/"
