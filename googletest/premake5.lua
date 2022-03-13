@@ -57,12 +57,13 @@ project "googletest"
 	-- -----------------------------------|Linux|----------------------------------- --
 	filter{}
 	filter "system:Linux"
-		pic "On"
 		buildoptions {
-			"-Wall", "-Wshadow", "-Wno-error=dangling-else", 
-			"-fno-exceptions", "-fno-rtti", "-DGTEST_HAS_RTTI=0"
+			"-fno-exceptions", "-Wall", "-Wshadow", "-Wno-error=dangling-else",
+			"-Wextra", "-Wno-unused-parameter", "-Wno-missing-field-initializers"
 		}
+		pic "On"
 		defines {
-			"GTEST_OS_LINUX"
+			"GTEST_OS_LINUX",
+			"GTEST_HAS_RTTI"
 		}
 	-- -----------------------------------|Linux|----------------------------------- --

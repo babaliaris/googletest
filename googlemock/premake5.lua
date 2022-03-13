@@ -57,9 +57,13 @@ project "googlemock"
 	-- -----------------------------------|Linux|----------------------------------- --
 	filter{}
 	filter "system:Linux"
+		buildoptions {
+			"-fno-exceptions", "-Wall", "-Wshadow", "-Wno-error=dangling-else",
+			"-Wextra", "-Wno-unused-parameter", "-Wno-missing-field-initializers"
+		}
 		pic "On"
 		defines {
-			"GTEST_OS_LINUX", 
+			"GTEST_OS_LINUX",
 			"GTEST_HAS_RTTI"
 		}
 	-- -----------------------------------|Linux|----------------------------------- --
