@@ -2,6 +2,7 @@ project "googletest"
 	staticruntime "on"
 	kind "StaticLib"
 	language "C++"
+	cppdialect "c++17"
 	targetdir "%{_WORKING_DIR}/builds/%{cfg.shortname}/"
 	objdir "%{_WORKING_DIR}/obj/%{prj.name}_%{cfg.shortname}/"
 

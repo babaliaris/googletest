@@ -2,6 +2,7 @@ project "googlemock"
 	staticruntime "on"
 	kind "StaticLib"
 	language "C++"
+	cppdialect "c++17"
 	targetdir "%{_WORKING_DIR}/builds/%{cfg.shortname}/"
 	objdir "%{_WORKING_DIR}/obj/%{prj.name}_%{cfg.shortname}/"
 
@@ -57,11 +58,8 @@ project "googlemock"
 	filter{}
 	filter "system:Linux"
 		pic "On"
-		buildoptions {
-			"-Wall", "-Wshadow", "-Wno-error=dangling-else", 
-			"-fno-exceptions", "-fno-rtti", "-DGTEST_HAS_RTTI=0"
-		}
 		defines {
-			"GTEST_OS_LINUX"
+			"GTEST_OS_LINUX", 
+			"GTEST_HAS_RTTI"
 		}
 	-- -----------------------------------|Linux|----------------------------------- --
