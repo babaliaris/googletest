@@ -21,19 +21,19 @@ project "googlemock"
 
 	-- -------------------------------|All Platforms|------------------------------- --
 	filter{}
-	filter "configurations:Debug"
+	filter "configurations:debug"
 		defines "DEBUG"
 		runtime "Debug"
 		symbols "on"
 
 	filter{}
-	filter "configurations:PreRelease"
+	filter "configurations:dist"
 		defines "NDEBUG"
 		runtime "Release"
 		optimize "on"
 
 	filter{}
-	filter "configurations:Release"
+	filter "configurations:release"
 		defines "NDEBUG"
 		runtime "Release"
 		optimize "on"
