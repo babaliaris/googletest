@@ -15,6 +15,7 @@ bazel-genfiles
 bazel-googletest
 bazel-out
 bazel-testlogs
+MODULE.bazel.lock
 # python
 *.pyc
 
